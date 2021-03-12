@@ -1,4 +1,4 @@
-# Repositorio Front correspondiente al desafío para optar a ser desarrollador Full Stack para Banco de Ripley
+# Repositorio Front correspondiente al desafío para optar a ser desarrollador Full Stack para Banco Ripley
 
 La aplicación se encuentra desplegada en un servicio heroku en este [link](https://be-banco-ripley.herokuapp.com/)
 
