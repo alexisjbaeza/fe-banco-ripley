@@ -1,0 +1,43 @@
+<nav class="navbar navbar-color navbar-expand-md navbar-dark">
+  <button
+    class="navbar-toggler navbar-toggler-right"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <a class="navbar-brand pl-2" href="#">
+    <img
+      src="assets/img/logo-banco-ripley.png"
+      width="154"
+      height="35"
+      alt=""
+    />
+  </a>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['home']">Home</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['carga']">Carga de fondos</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['retiro']">Retiro de fondos</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['transferencia']">Transferencia</a>
+      </li>
+
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['movimientos']">Mis Movimientos</a>
+      </li>
+    </ul>
+  </div>
+</nav>

@@ -1,0 +1,30 @@
+<div class="animated fadeIn fast card mx-auto p-5" style="width: 90%">
+  <div class="container">
+    <h1 class="cover-heading">Mini Banco Ripley</h1>
+    <br />
+    <div *ngIf="sesion_iniciada && cuenta">
+      <h3>¡Bienvenido {{ cuenta.nombre }}!</h3>
+      <h5>El saldo de tu cuenta {{ cuenta.rut }} es ${{ cuenta.saldo }}</h5>
+      <br />
+    </div>
+
+    <div class="mx-auto" style="width: 30%">
+      <div *ngIf="!sesion_iniciada">
+        <a href="#/login" type="button" class="btn btn-primary btn-lg btn-block"
+          >Iniciar sesión</a
+        >
+        <a href="#/registro" class="btn btn-secondary btn-lg btn-block"
+          >Registrarme</a
+        >
+      </div>
+      <div *ngIf="sesion_iniciada">
+        <button
+          class="btn btn-secondary btn-lg btn-block"
+          (click)="cerrarSesion()"
+        >
+          Cerrar sesión
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

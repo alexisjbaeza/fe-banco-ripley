@@ -1,0 +1,24 @@
+<app-saldo></app-saldo>
+<div *ngIf="movimientos">
+  <table class="table">
+    <thead class="thead">
+      <tr>
+        <th scope="col">Tipo Transaccion</th>
+        <th scope="col">Cuenta de transferencia</th>
+        <th scope="col">Monto</th>
+        <th scope="col">Fecha</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngIf="movimientos.length == 0">
+        <td>Aun no tienes movimientos</td>
+      </tr>
+      <tr *ngFor="let movimiento of movimientos">
+        <td>{{ movimiento.tipo }}</td>
+        <td>{{ movimiento.cuenta_destino }}</td>
+        <td>{{ movimiento.monto }}</td>
+        <td>{{ movimiento.fecha | date: "dd/MM/yyyy h:mm:ss a" }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

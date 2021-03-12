@@ -1,0 +1,28 @@
+<div class="card mx-auto p-5" style="width: 80%">
+  <form [formGroup]="formRetiro" (ngSubmit)="realizarRetiro()">
+    <h2>Retiro de fondos</h2>
+    <br />
+    <app-saldo></app-saldo>
+    <div class="form-group">
+      <label for="monto">Monto</label>
+      <input
+        type="number"
+        min="1"
+        class="form-control"
+        [ngClass]="{ 'is-invalid': f.monto.touched && f.monto.errors }"
+        formControlName="monto"
+        id="monto"
+        placeholder="Monto a retirar"
+      />
+      <div *ngIf="f.monto.errors" class="invalid-feedback">
+        <div *ngIf="f.monto.errors.required">
+          El monto a cargar es requerido
+        </div>
+        <div *ngIf="f.monto.errors.pattern">El monto no es válido</div>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary btn-block">
+      Retirar fondos
+    </button>
+  </form>
+</div>
